@@ -93,10 +93,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         );
                       }
                       if (state is LoadedState) {
-                        return Expanded(
-                          child: PokemonInfoCard(
-                            pokemon: state.pokemon,
-                          ),
+                        return PokemonInfoCard(
+                          pokemon: state.pokemon,
                         );
                       }
                       if (state is ErrorMessageState) {

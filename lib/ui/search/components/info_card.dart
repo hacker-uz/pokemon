@@ -20,35 +20,7 @@ class PokemonInfoCard extends StatelessWidget {
             color: Color(0xFFDFDFDF),
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(pokemon.name),
-            Divider(
-              height: 15,
-              color: Color(0xFFDFDFDF),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: pokemon.effectEntries.length,
-                itemBuilder: (context, index) {
-                  var element = pokemon.effectEntries[index].effect;
-                  return Container(
-                    width: double.infinity,
-                    child: Text(
-                      element,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 6,
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
+        child: Text("Названия покемона: ${pokemon.name}"),
       ),
     );
   }
